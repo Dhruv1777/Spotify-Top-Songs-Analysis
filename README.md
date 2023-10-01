@@ -42,7 +42,7 @@ To begin with, we can go with a regular multivariate regression approach.
 
 We can see that the p values all indicate a high degree of statistical significance for our predictor variables, a good start! The Adjusted R-squared value though is only 0.06752 though, indicating the model can only explain 6.75% of the variance in "popularity". Thus, while the overall regression model is statistically significant (as also confirmed by the F-statistic), it can only explain variance in popularity to a small degree.
 
-Also relevant is the impact of individual predictiors on popularity. This graph describes the extent and direction of this relationship:
+Also relevant is the impact of individual predictors on popularity. This graph describes the extent and direction of this relationship:
 
 ![Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png](./images/Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png)
 
@@ -52,9 +52,11 @@ Now I know blindly chasing after a higher R-squared value is not always the best
 
 ### Random Forest Model:
 
-Before changing anything else, I want to see how changing the nature of the model will impact the predictons. Going away from multivariate models, I am trying out a random foresy model with 100 trees:
+Before changing anything else, I want to see how changing the nature of the model will impact the predictions. Going away from multivariate models, I am trying out a random forest regression model with 100 trees. This could help garner more insights that we would otherwise miss out on as it can handle multicollinearity much better (such as that may exist with energy, loudness, and acousticness), as well as help capture non-linear relationships.
 
 ![Random_Forest_Summary.jpg](./images/Random_Forest_Summary.jpg)
+
+We perform much better on the R squared (OOB) value of 0.2035, which means that the model explains about 20.35% of the variance in popularity. However, on the flip side, we also have a very high OOB prediction error (MSE). This is as high as 201.0056 which is not good at all considering the range of the dependent variable, 'popularity' is only 0-100! This indicates a high deviation of the predicted values from the true values and also implies that the model would not do well on new, unseen data.
 
 
 Also of note is the variable importance graph derived from the random forest model:
@@ -62,6 +64,13 @@ Also of note is the variable importance graph derived from the random forest mod
 
 
 ### Other Model(s)
+
+Going forward, a simple way would be to rely again on the more simple multivariate model but remove predictors with possible high multicollinearity and lower importance. 
+
+It looks like for any budding songwriter, what makes a song popular goes much further beyond the internal attributes of the song itself. Though these do have a good degree of statistical significance, their ultimate impact is limited. Thus, while it is best to focus on having your song score high/low on the following metrics, there are a multitude of external factors to consider:
+
+
+
 
 
 
