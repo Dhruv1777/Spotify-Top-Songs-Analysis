@@ -26,6 +26,8 @@ Moving on from these broader insights, I want to see if we can build a predictiv
 
 To begin with, it seemed to me that there could be a degree of high multicollinearity between the predictor variables. I used the Variance Inflation Factor (VIF) method to test for this. 
 
+![VIF_values.jpg](./images/VIF_values.jpg)
+
 
 The VIF values are not all that high. I was expecting to take action if they exceeded 5. Only two predictors come close to that, 'energy' and 'loudness'. Charting a correlation plot from a correlation matrix, we can see that 'energy' and 'loudness' have a fair degree of positive correlation with each other, and both have a fairly negative correlation with 'acousticness'. This could be something to keep an eye on:
 
@@ -36,7 +38,7 @@ The VIF values are not all that high. I was expecting to take action if they exc
 
 To begin with, we can go with a regular multivariate regression approach. 
 
-
+![Multivariate_summary.jpg](./images/Multivariate_summary.jpg)
 
 We can see that the p values all indicate a high degree of statistical significance for our predictor variables, a good start! The Adjusted R-squared value though is only 0.06752 though, indicating the model can only explain 6.75% of the variance in "popularity". Thus, while the overall regression model is statistically significant (as also confirmed by the F-statistic), it can only explain variance in popularity to a small degree.
 
