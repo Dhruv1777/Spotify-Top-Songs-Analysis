@@ -6,7 +6,7 @@ I'm sure a lot of us have thought about what it would take to make a hit song. S
 
 ### Broad Insights:
 
-One of the best ways to begin is to analyze the popularity of different generes (note - there are many, many more genres than just these 10, but these were selected for being the most popular to make the graph more readable: 
+One of the best ways to begin is to analyze the popularity of different genres (note - there are many, many more genres than just these 10, but these were selected for being the most popular to make the graph more readable: 
 
 ![popularity_by_genre-1.png](./images/popularity_by_genre-1.png)
 
@@ -40,7 +40,9 @@ To begin with, we can go with a regular multivariate regression approach.
 
 We can see that the p values all indicate a high degree of statistical significance for our predictor variables, a good start! The Adjusted R-squared value though is only 0.06752 though, indicating the model can only explain 6.75% of the variance in "popularity". Thus, while the overall regression model is statistically significant (as also confirmed by the F-statistic), it can only explain variance in popularity to a small degree.
 
+Also relevant is the impact of individual predictiors on popularity. This graph describes the extent and direction of this relationship:
 
+![Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png](./images/Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png)
 
 Now I know blindly chasing after a higher R-squared value is not always the best approach, especially with a topic such as this where there can be so many outside factors influencing the popularity of the song that are not in this dataset (such as how the song was promoted, how it relates to the trends of the time, etc), but I do want to see if we can do better.
 
