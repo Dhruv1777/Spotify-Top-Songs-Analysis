@@ -50,11 +50,16 @@ Now I know blindly chasing after a higher R-squared value is not always the best
 
 
 
-![Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png](./images/Impact_of_Predictors_on_Popularity_(Coefficients_of_the_predictors)-1.png)
+### Random Forest Model:
+
+Before changing anything else, I want to see how changing the nature of the model will impact the predictons. Going away from multivariate models, I am trying out a random foresy model with 100 trees:
 
 
-
+Also of note is the variable importance graph derived from the random forest model:
 ![Variable_Importance_in_Random_Forest_Model-1.png](./images/Variable_Importance_in_Random_Forest_Model-1.png)
+
+
+### Other Model(s)
 
 
 
